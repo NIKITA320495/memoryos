@@ -107,12 +107,6 @@ memoryos/
 │   ├── embedder.py        # sentence-transformers wrapper (singleton)
 │   ├── models.py          # Pydantic data models
 │   └── config.py          # Environment config
-├── tests/
-│   ├── test_tools.py      # Tool-level tests
-│   ├── test_memory_store.py
-│   └── test_embedder.py
-├── scripts/
-│   └── demo.py            # CLI demo with Ollama agent
 ├── app.py                 # Streamlit UI
 ├── server.py              # Entry point
 ├── requirements.txt
@@ -186,13 +180,6 @@ streamlit run app.py
 
 Open `http://localhost:8501`
 
-### Run the CLI Demo
-
-```bash
-python scripts/demo.py
-```
-
----
 
 ## Connect to Claude Desktop
 
@@ -217,19 +204,7 @@ Add this to `~/Library/Application Support/Claude/claude_desktop_config.json` (M
 
 Restart Claude Desktop. The 🔨 hammer icon confirms MemoryOS is connected.
 
-**Test it:**
-```
-"My user ID is nikita_001. My name is Nikita and I love building AI agents."
-```
 
-Open a new chat:
-```
-"My user ID is nikita_001. What do you know about me?"
-```
-
-Claude will remember — across sessions, forever.
-
----
 
 ## MCP Tools
 
@@ -280,26 +255,6 @@ search_memory(query="career goals", user_id="nikita_001", top_k=3)
 
 ---
 
-## Running Tests
-
-```bash
-pytest tests/ -v
-```
-
-```
-tests/test_embedder.py::test_singleton              PASSED
-tests/test_embedder.py::test_embed_fixed_dimension  PASSED
-tests/test_embedder.py::test_similar_texts_close    PASSED
-tests/test_memory_store.py::test_store_returns_memory PASSED
-tests/test_memory_store.py::test_search_user_isolation PASSED
-tests/test_memory_store.py::test_updated_memory_searchable PASSED
-tests/test_tools.py::test_store_memory_success      PASSED
-tests/test_tools.py::test_search_memory_user_isolation PASSED
-...
-23 passed in 18.42s
-```
-
----
 
 ## Environment Variables
 
@@ -325,17 +280,7 @@ tests/test_tools.py::test_search_memory_user_isolation PASSED
 
 ---
 
-## Contributing
 
-Contributions welcome. Please open an issue first to discuss what you'd like to change.
-
-```bash
-git checkout -b feature/your-feature
-git commit -m "feat: add your feature"
-git push origin feature/your-feature
-```
-
----
 
 ## Roadmap
 
@@ -357,7 +302,7 @@ git push origin feature/your-feature
 
 <div align="center">
 
-Built with 🧠 by Nikita Babbar · [MIT License](LICENSE)
+Built with 🧠 by Nikita Babbar 
 
 *If this project helped you, please ⭐ the repo*
 

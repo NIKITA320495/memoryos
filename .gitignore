@@ -1,0 +1,9 @@
+.env
+venv/
+__pycache__/
+*.pyc
+memory_db/chroma.sqlite3
+memory_db/[0-9]*/
+.DS_Store
+*.egg-info/
+dist/
